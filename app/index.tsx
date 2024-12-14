@@ -8,11 +8,11 @@ const app = () => {
             <ImageBackground source={require('@/assets/images/react-logo.png')} resizeMode='cover'>
                 <Text style={styles.title}>App</Text>
                 <Link href="/explore"
-                    style={styles.title}
+                    style={{ marginHorizontal: 'auto' }}
                     asChild
                 >
-                    <Pressable>
-                        <Text style={styles.title}>Explore</Text>
+                    <Pressable style={styles.button}>
+                        <Text style={styles.buttonText}>Explore</Text>
                     </Pressable>
                 </Link>
             </ImageBackground>
@@ -42,6 +42,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         textDecorationLine: 'underline',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        padding: 4,
+        marginBottom: 120
+    },
+    button: {
+        height: 60,
+        borderRadius: 20,
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        padding: 6
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        textAlign: 'center',
         padding: 4,
         marginBottom: 120
     }
