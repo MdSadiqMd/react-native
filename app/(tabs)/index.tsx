@@ -6,7 +6,7 @@ const app = () => {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('@/assets/images/react-logo.png')} resizeMode='cover'>
-                <Text style={styles.title}>App</Text>
+                <Text style={styles.title}>App Coffee</Text>
                 <Link href="/contact"
                     style={{ marginHorizontal: 'auto' }}
                     asChild
