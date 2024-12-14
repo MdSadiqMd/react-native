@@ -1,11 +1,20 @@
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, Pressable } from 'react-native';
 import React from 'react';
+import { Link } from 'expo-router';
 
 const app = () => {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('@/assets/images/react-logo.png')} resizeMode='cover'>
-                <Text style={styles.text}>App</Text>
+                <Text style={styles.title}>App</Text>
+                <Link href="/explore"
+                    style={styles.title}
+                    asChild
+                >
+                    <Pressable>
+                        <Text style={styles.title}>Explore</Text>
+                    </Pressable>
+                </Link>
             </ImageBackground>
         </View>
     );
@@ -26,11 +35,14 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
         justifyContent: 'center'
     },
-    text: {
+    title: {
         color: 'white',
         fontSize: 42,
         fontWeight: 'bold',
         textAlign: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)'
+        textDecorationLine: 'underline',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        padding: 4,
+        marginBottom: 120
     }
 });
